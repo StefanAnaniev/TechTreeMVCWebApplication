@@ -8,8 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using TechTreeMVCWebApplication.Data;
 using TechTreeMVCWebApplication.Entities;
 
-namespace TechTreeMVCWebApplication.Controllers
+namespace TechTreeMVCWebApplication.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryItemController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -19,13 +20,13 @@ namespace TechTreeMVCWebApplication.Controllers
             _context = context;
         }
 
-        // GET: CategoryItem
+        // GET: Admin/CategoryItem
         public async Task<IActionResult> Index()
         {
             return View(await _context.CategoryItem.ToListAsync());
         }
 
-        // GET: CategoryItem/Details/5
+        // GET: Admin/CategoryItem/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,13 +44,13 @@ namespace TechTreeMVCWebApplication.Controllers
             return View(categoryItem);
         }
 
-        // GET: CategoryItem/Create
+        // GET: Admin/CategoryItem/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: CategoryItem/Create
+        // POST: Admin/CategoryItem/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +66,7 @@ namespace TechTreeMVCWebApplication.Controllers
             return View(categoryItem);
         }
 
-        // GET: CategoryItem/Edit/5
+        // GET: Admin/CategoryItem/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,7 +82,7 @@ namespace TechTreeMVCWebApplication.Controllers
             return View(categoryItem);
         }
 
-        // POST: CategoryItem/Edit/5
+        // POST: Admin/CategoryItem/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +117,7 @@ namespace TechTreeMVCWebApplication.Controllers
             return View(categoryItem);
         }
 
-        // GET: CategoryItem/Delete/5
+        // GET: Admin/CategoryItem/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +135,7 @@ namespace TechTreeMVCWebApplication.Controllers
             return View(categoryItem);
         }
 
-        // POST: CategoryItem/Delete/5
+        // POST: Admin/CategoryItem/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
