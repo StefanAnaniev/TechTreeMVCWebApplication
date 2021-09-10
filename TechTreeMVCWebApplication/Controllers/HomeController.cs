@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using TechTreeMVCWebApplication.Data;
 using TechTreeMVCWebApplication.Entities;
 using TechTreeMVCWebApplication.Models;
@@ -19,7 +19,6 @@ namespace TechTreeMVCWebApplication.Controllers
         private readonly ApplicationDbContext _context;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-
 
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {
@@ -50,27 +49,15 @@ namespace TechTreeMVCWebApplication.Controllers
                 }
 
             }
-            //else
-            //{
-            //    var categories = await GetCategoriesThatHaveContent();
+            else
+            {
+                var categories = await GetCategoriesThatHaveContent();
 
-            //    categoryDetailsModel.Categories = categories;
+                categoryDetailsModel.Categories = categories;
 
-            //}
+            }
 
             return View(categoryDetailsModel);
-        }
-
-        private IEnumerable<GroupedCategoryItemsByCategoryModel> GetGroupedCategoryItemsByCategory(IEnumerable<CategoryItemDetailsModel> categoryItemDetailsModels)
-        {
-            return from item in categoryItemDetailsModels
-                   group item by item.CategoryId into g
-                   select new GroupedCategoryItemsByCategoryModel
-                   {
-                       Id = g.Key,
-                       Title = g.Select(c => c.CategoryTitle).FirstOrDefault(),
-                       Items = g
-                   };
         }
 
         private async Task<List<Category>> GetCategoriesThatHaveContent()
@@ -89,6 +76,18 @@ namespace TechTreeMVCWebApplication.Controllers
                                                }).Distinct().ToListAsync();
             return categoriesWithContent;
 
+        }
+
+        private IEnumerable<GroupedCategoryItemsByCategoryModel> GetGroupedCategoryItemsByCategory(IEnumerable<CategoryItemDetailsModel> categoryItemDetailsModels)
+        {
+            return from item in categoryItemDetailsModels
+                   group item by item.CategoryId into g
+                   select new GroupedCategoryItemsByCategoryModel
+                   {
+                       Id = g.Key,
+                       Title = g.Select(c => c.CategoryTitle).FirstOrDefault(),
+                       Items = g
+                   };
         }
 
         private async Task<IEnumerable<CategoryItemDetailsModel>> GetCategoryItemDetailsForUser(string userId)
