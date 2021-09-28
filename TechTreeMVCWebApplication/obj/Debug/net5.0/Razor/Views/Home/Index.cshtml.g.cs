@@ -27,6 +27,13 @@ using TechTreeMVCWebApplication.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "C:\Users\anani\Desktop\6 semestar\IS\Proekt\TechTreeMVCWebApplication\TechTreeMVCWebApplication\Views\_ViewImports.cshtml"
+using TechTreeMVCWebApplication.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\anani\Desktop\6 semestar\IS\Proekt\TechTreeMVCWebApplication\TechTreeMVCWebApplication\Views\Home\Index.cshtml"
 using TechTreeMVCWebApplication.Data;
 
@@ -34,7 +41,7 @@ using TechTreeMVCWebApplication.Data;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aafedea5d05b9de97380dd7360f3d3e7159058f6", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dad55f50704b5d00f903fcf913fbc8f72c16bd8a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"201883d917de12a2f4847093a66ba2776bfd1bee", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CategoryDetailsModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -174,7 +181,7 @@ WriteAttributeValue("", 1240, item.MediaImagePath, 1240, 20, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" width=\"100\" height=\"100\" class=\"img-thumbnail float-left mr-2\" />\r\n                                    <h5 class=\"card-title mt-2\">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aafedea5d05b9de97380dd7360f3d3e7159058f610456", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aafedea5d05b9de97380dd7360f3d3e7159058f610701", async() => {
 #nullable restore
 #line 35 "C:\Users\anani\Desktop\6 semestar\IS\Proekt\TechTreeMVCWebApplication\TechTreeMVCWebApplication\Views\Home\Index.cshtml"
                                                                                                                                                     Write(item.CategoryItemTitle);
@@ -267,7 +274,7 @@ else
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "aafedea5d05b9de97380dd7360f3d3e7159058f615411", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "aafedea5d05b9de97380dd7360f3d3e7159058f615656", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -298,7 +305,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper.Model = Model.Categories;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n\r\n\r\n<div class=\"modal fade\" id=\"UserLoginModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "aafedea5d05b9de97380dd7360f3d3e7159058f617428", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "aafedea5d05b9de97380dd7360f3d3e7159058f617673", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -326,7 +333,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper.Model = new LoginModel
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n</div>\r\n\r\n<div class=\"modal fade\" id=\"UserRegistrationModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "aafedea5d05b9de97380dd7360f3d3e7159058f619341", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "aafedea5d05b9de97380dd7360f3d3e7159058f619586", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
